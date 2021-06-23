@@ -1,0 +1,252 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-image: url("image/b5.jpg");
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+:root{
+    --main-bg: #2885cc;
+    --main-color: #0097e6;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar li{
+    margin-left: 0.5rem;
+
+}
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+.navbar a:hover{
+    color: rgb(255, 136, 0);
+    
+}
+.navbar a:active{
+    color: yellow;
+}
+.navbar-toggler{
+    
+    background-color: blue;
+}
+.fa-snowflake{
+    font-size: 2.8rem;
+    transition: all linear;
+    animation: rot 2s linear infinite;
+    color:chartreuse;
+
+}
+@keyframes rot {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+/* main_header */
+.main_header_left{
+    height: 54rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_header_left p{
+    font-size: 2rem;
+}
+.main_header_left h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_header_left .text-clr{
+    color: var(--main-bg);
+}
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 9px 2px #000;
+    outline: none;
+
+}
+.main_header_left button:hover{
+    color: #1a0af3;
+    box-shadow: 0 8px 9px 2px #0097e6;
+}
+.main_header_right{
+    height: 54rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_header_right figure img{
+    filter: drop-shadow(0 0.5rem 4rem rgba(0 0 0 0.5));
+    height:250px;
+    border-radius: 50rem 60rem 100rem 80rem;
+}
+/* weather Page  */
+.form{
+    width: 60%;
+    position: relative;
+    margin: 8rem auto 4rem;
+}
+.form input[type="text"]{
+    width: 100%;
+    padding: 1.1rem 5rem 1.1rem 1.8rem;
+    background: rgb(41, 51, 50);
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 3rem;
+}
+
+::placeholder{
+    color: #bfc1c8;
+}
+.form input[type="submit"]{
+    position: absolute;
+    width: 80px;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    background: #009ad8;
+    padding: 0.3rem;
+    border-radius: 3rem;
+    color: white;
+    font-size: 1.6rem;
+
+}
+.form input[type="submit"]:hover{
+    color: #009ad8;
+    background-color: #fff;
+}
+.tempInfo{
+    width: 50rem;
+    margin: auto;
+    min-height: 30rem;
+    background-color: rgb(41, 51, 50);
+    border-radius: 1rem;
+    /* padding: 1rem; */
+    /* font-family: ; */
+}
+.topLayer{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(26, 32, 32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+}
+.topLayer p{
+    color: white;
+    font-weight: 300;
+    padding: 2rem 2rem 1rem 2rem;
+    font-size: 1.5rem;
+}
+.mainLayer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.mainLayer #city_name{
+    padding: 2rem 0;
+    color: white;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.mainLayer .middleLayer{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+.mainLayer .middleLayer p,
+.mainLayer .middleLayer .fa{
+    font-size: 7rem;
+    font-weight: 900;
+}
+.fa{
+    color: rgb(31, 100, 250);
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+.dataHide{
+    visibility: hidden;
+    transition: all 0.3s linear;
+
+}
+/* error Page Style  */
+.errImg{
+    width: 60rem;
+    height: 30rem;
+}
+/* footer Style  */
+footer{
+    width: 100%;
+    background-color: blue;
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    color: white;
+    line-height:3rem;
+    font-size: 1.2rem;
+}
+@media (max-width:900px) {
+    .main_header_left{
+        height: auto;
+        margin: 5rem;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+    .form{
+        width: auto;
+    }
+    .tempInfo{
+        width: auto;
+
+    }
+    .mainLayer .middleLayer p,
+    .mainLayer .middleLayer .fa{
+    font-size: 5rem;
+    }
+    sup{
+        font-size: 4rem;
+        margin-top: -4rem;
+    }
+}

@@ -40,11 +40,15 @@ const getInfo = async(event) =>{
             }
             else if(tempMode =="Rain"){
                 tempStatus.innerHTML =
-                "<i class='fas fa-rain' style='color:#a4b0be;'></i>"
+                "<i class='fas fa-cloud-rain' style='color:#a4b0be;'></i>"
+            }
+            else if(tempMode == "Haze"){
+                tempStatus.innerHTML =
+                "<i class='fas fa-cloud-sun' style='color:#eccc68;'></i>"
             }
             else{
                 tempStatus.innerHTML =
-                "<i class='fas fa-sun' style='color:#eccc68;'></i>"
+                "<i class='fas fa-cloud-sun' style='color:#eccc68;'></i>"
             }
 
             dataHide.classList.remove('dataHide');
